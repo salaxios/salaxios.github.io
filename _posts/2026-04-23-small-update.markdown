@@ -5,6 +5,7 @@ date:   2026-04-23 4:00:00 -0400
 image: /assets/images/sc1.png
 categories: devlog
 ---
+![screenshot1](/assets/images/sc1.png)
 Progress has been slow but work has begun on expanding the maps and adding visual cohesion and special graphical effects.
 We've decided to make large changes to the RPGMaker MZ engine and are essentially at this point using a heavily modified version of the base engine 
 with several auxillary editors. This is done to take care of added graphical workloads not supported by the base RPGMaker MZ as well as 
