@@ -2,6 +2,7 @@
 layout: post
 title:  "Small Update"
 date:   2026-04-23 4:00:00 -0400
+image: /assets/images/sc1.png
 categories: devlog
 ---
 Progress has been slow but work has begun on expanding the maps and adding visual cohesion and special graphical effects.
