@@ -21,22 +21,24 @@
 }
 
 :root {
-  --primary: #1a3a6e;
-  --primary-dark: #0f2a4f;
-  --primary-light: #2a5a9e;
-  --accent: #ff6600;
-  --accent-dark: #e05500;
-  --accent-light: #ff8844;
-  --gray-100: #f8f9fa;
-  --gray-200: #eef2f5;
-  --gray-300: #e0e6ed;
-  --gray-400: #cbd5e1;
-  --gray-500: #94a3b8;
-  --gray-600: #64748b;
-  --gray-700: #334155;
-  --gray-800: #1e293b;
-  --gray-900: #0f172a;
-  --success: #10b981;
+  /* Blue & Baby Blue Palette */
+  --primary-dark: #0a2540;      /* Deep navy */
+  --primary: #1a4a7a;            /* Rich blue */
+  --primary-light: #3a7ca5;      /* Medium blue */
+  --primary-baby: #7eb8d8;       /* Baby blue */
+  --primary-pale: #c5e0f4;       /* Pale baby blue */
+  --accent: #2c7da0;             /* Accent blue */
+  --accent-light: #61a5c2;       /* Light accent */
+  --gray-100: #f0f6fa;
+  --gray-200: #e2edf5;
+  --gray-300: #d0dfec;
+  --gray-400: #a8bccc;
+  --gray-500: #7a8e9e;
+  --gray-600: #506473;
+  --gray-700: #364654;
+  --gray-800: #1e2c38;
+  --gray-900: #0f1a24;
+  --success: #2c9f7c;
   --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
   --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
@@ -46,13 +48,13 @@
 body {
   font-family: 'Inter', sans-serif;
   color: var(--gray-700);
-  background: linear-gradient(135deg, var(--gray-100) 0%, #e8ecf2 100%);
+  background: linear-gradient(135deg, var(--gray-100) 0%, #e6f0f8 100%);
   line-height: 1.5;
 }
 
 /* Header */
 .l-header {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -69,26 +71,42 @@ body {
   height: 80px;
 }
 
-.logo h1 {
-  font-size: 28px;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text h1 {
+  font-size: 24px;
   font-weight: 800;
   letter-spacing: -0.5px;
 }
 
-.logo a {
+.logo-text h1 a {
   color: white;
   text-decoration: none;
 }
 
-.logo span {
-  color: var(--accent);
+.logo-text h1 span {
+  color: var(--primary-baby);
 }
 
 .logo-sub {
-  font-size: 11px;
+  font-size: 10px;
   color: rgba(255,255,255,0.7);
   letter-spacing: 2px;
-  margin-top: 4px;
 }
 
 /* Navigation */
@@ -108,7 +126,7 @@ body {
 }
 
 .nav-list a:hover {
-  color: var(--accent);
+  color: var(--primary-baby);
 }
 
 .nav-list a::after {
@@ -118,7 +136,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--accent);
+  background: var(--primary-baby);
   transition: width 0.2s;
 }
 
@@ -151,7 +169,7 @@ body {
   right: -20%;
   width: 80%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255,102,0,0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(126,184,216,0.1) 0%, transparent 70%);
   transform: rotate(25deg);
 }
 
@@ -175,7 +193,7 @@ body {
 }
 
 .hero-content h2 span {
-  color: var(--accent);
+  color: var(--primary-baby);
 }
 
 .hero-content p {
@@ -203,15 +221,16 @@ body {
 }
 
 .btn-primary {
-  background: var(--accent);
-  color: white;
+  background: var(--primary-baby);
+  color: var(--primary-dark);
   box-shadow: var(--shadow-md);
 }
 
 .btn-primary:hover {
-  background: var(--accent-dark);
+  background: white;
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
+  color: var(--primary);
 }
 
 .btn-outline {
@@ -220,8 +239,8 @@ body {
 }
 
 .btn-outline:hover {
-  border-color: var(--accent);
-  background: rgba(255,102,0,0.1);
+  border-color: var(--primary-baby);
+  background: rgba(126,184,216,0.1);
 }
 
 .hero-image img {
@@ -250,7 +269,7 @@ body {
 
 .section-header .badge {
   display: inline-block;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
   color: white;
   font-size: 12px;
   font-weight: 600;
@@ -317,7 +336,7 @@ body {
 .card-tag {
   font-size: 12px;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--primary);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 12px;
@@ -338,7 +357,7 @@ body {
 }
 
 .card-link {
-  color: var(--accent);
+  color: var(--primary);
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
@@ -349,6 +368,7 @@ body {
 
 .card-link:hover {
   gap: 10px;
+  color: var(--primary-light);
 }
 
 /* Tools Grid */
@@ -376,7 +396,7 @@ body {
 .tool-icon {
   width: 64px;
   height: 64px;
-  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -431,7 +451,7 @@ body {
 .status-value {
   font-size: 24px;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--primary-baby);
 }
 
 .status-value.green {
@@ -458,19 +478,21 @@ body {
   margin-bottom: 48px;
 }
 
-.footer-logo h3 {
-  font-size: 24px;
-  font-weight: 800;
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.footer-logo h3 span {
-  color: var(--accent);
+.footer-logo img {
+  height: 45px;
+  width: auto;
+  filter: brightness(0) invert(1);
 }
 
 .footer-logo p {
   color: var(--gray-400);
   font-size: 13px;
-  margin-top: 12px;
 }
 
 .footer-links {
@@ -487,7 +509,7 @@ body {
 }
 
 .footer-links a:hover {
-  color: var(--accent);
+  color: var(--primary-baby);
 }
 
 .footer-contact p {
@@ -501,7 +523,7 @@ body {
 
 .footer-contact i {
   width: 20px;
-  color: var(--accent);
+  color: var(--primary-baby);
 }
 
 .footer-bottom {
@@ -615,8 +637,8 @@ body {
 }
 
 /* Utility */
-.text-accent { color: var(--accent); }
-.bg-accent { background: var(--accent); }
+.text-accent { color: var(--primary-baby); }
+.bg-accent { background: var(--primary-baby); }
 </style>
 </head>
 <body>
@@ -624,8 +646,11 @@ body {
 <header class="l-header">
   <div class="l-header__inner">
     <div class="logo">
-      <h1><a href="/">Salaxios<span>Studio</span></a></h1>
-      <div class="logo-sub">INDEPENDENT GAME DEVELOPMENT</div>
+      <img src="assets/image.png" alt="Salaxios Software Studio Logo">
+      <div class="logo-text">
+        <h1><a href="/">Salaxios<span>Studio</span></a></h1>
+        <div class="logo-sub">INDEPENDENT GAME DEVELOPMENT</div>
+      </div>
     </div>
     <nav>
       <ul class="nav-list">
@@ -654,13 +679,12 @@ body {
         </div>
       </div>
       <div class="hero-image">
-        <img src="https://salaxios.github.io/assets/vba-link-lan.jpg" alt="Project Locust gameplay">
+        <img src="assets/vba-link-lan.jpg" alt="Project Locust gameplay">
       </div>
     </div>
   </section>
 
   <div class="container">
-    <!-- Content injected from Jekyll -->
     <div class="post-content">
       {{ content }}
     </div>
@@ -677,7 +701,7 @@ body {
       <div class="card-grid">
         <div class="card">
           <div class="card-image">
-            <img src="https://salaxios.github.io/assets/Splash4.png" alt="Project Locust screenshot">
+            <img src="assets/Splash4.png" alt="Project Locust screenshot">
           </div>
           <div class="card-content">
             <div class="card-tag">In Development</div>
@@ -688,7 +712,7 @@ body {
         </div>
         <div class="card">
           <div class="card-image">
-            <img src="https://salaxios.github.io/assets/images/4/toolbar.png" alt="SNE Toolkit">
+            <img src="assets/images/4/toolbar.png" alt="SNE Toolkit">
           </div>
           <div class="card-content">
             <div class="card-tag">Toolkit</div>
@@ -732,7 +756,6 @@ body {
         </div>
       </div>
 
-      <!-- Status Bar -->
       <div class="status-bar">
         <div class="status-item">
           <div class="status-label">Project Status</div>
@@ -764,7 +787,7 @@ body {
       </div>
       <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
         <a href="mailto:salaxios@proton.me" class="btn btn-primary"><i class="fas fa-envelope"></i> salaxios@proton.me</a>
-        <a href="#" class="btn btn-outline" style="border-color: var(--accent); color: var(--accent);"><i class="fab fa-github"></i> GitHub</a>
+        <a href="#" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);"><i class="fab fa-github"></i> GitHub</a>
       </div>
     </div>
   </section>
@@ -774,7 +797,7 @@ body {
   <div class="l-footer__inner">
     <div class="footer-grid">
       <div class="footer-logo">
-        <h3>Salaxios<span>Studio</span></h3>
+        <img src="assets/image.png" alt="Salaxios Software Studio Logo">
         <p>Independent game development studio creating story-driven experiences since 2024.</p>
       </div>
       <div class="footer-links">
@@ -800,7 +823,6 @@ body {
 </footer>
 
 <script>
-  // Simple mobile menu toggle
   const menuBtn = document.querySelector('.mobile-menu-btn');
   const navList = document.querySelector('.nav-list');
   if (menuBtn && navList) {
@@ -815,6 +837,7 @@ body {
         navList.style.background = 'var(--primary-dark)';
         navList.style.padding = '20px';
         navList.style.gap = '16px';
+        navList.style.alignItems = 'center';
       }
     });
   }
