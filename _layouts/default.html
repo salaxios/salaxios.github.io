@@ -653,12 +653,12 @@ body {
     </div>
     <nav>
       <ul class="nav-list">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Devlog</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">SNE Toolkit</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="mailto:salaxios@proton.me">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#devlog">Devlog</a></li>
+        <li><a href="#proj">Projects</a></li>
+        <li><a href="#SNE">SNE Toolkit</a></li>
+        <li><a href="#status">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
@@ -669,13 +669,13 @@ body {
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero__inner">
+    <div class="hero__inner" id="home">
       <div class="hero-content">
         <h2>A Story About<br><span>The End of the World</span></h2>
         <p>Salaxios Software is an independent game developer focused on creating a deep, story-driven top-down JRPG experience that immerse players in compelling visuals and a rich narratives about the consuming danger human greed.</p>
         <div class="hero-buttons">
-          <a href="#" class="btn btn-primary">Explore Games <i class="fas fa-arrow-right"></i></a>
-          <a href="#" class="btn btn-outline">Read Devlog</a>
+          <a href="https://salaxios.github.io/devlog/2026/04/23/small-update.html" class="btn btn-primary">Explore Games <i class="fas fa-arrow-right"></i></a>
+          <a href="#devlog" class="btn btn-outline">Read Devlog</a>
         </div>
       </div>
       <div class="hero-image">
@@ -685,7 +685,7 @@ body {
   </section>
 
   <div class="container">
-    <div class="post-content">
+    <div class="post-content" id="devlog">
       {{ content }}
     </div>
   </div>
@@ -694,7 +694,7 @@ body {
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <div class="badge">Current Project</div>
+        <div class="badge" id="proj">Current Project</div>
         <h2>Project <span class="text-accent">Locust</span></h2>
         <p>A story-driven top-down JRPG built with the Salaxios Narrative Engine</p>
       </div>
@@ -718,7 +718,7 @@ body {
             <div class="card-tag">Toolkit</div>
             <h3>Salaxios Narrative Engine</h3>
             <p>A comprehensive suite of tools for narrative-driven game development, including JSGSM, SGTDBS, and COLLED editors.</p>
-            <a href="#" class="card-link">Explore Tools <i class="fas fa-chevron-right"></i></a>
+            <a href="https://salaxios.github.io/devlog/2026/06/05/the-salaxios-narrative-engine-toolkit.html" class="card-link">Explore Tools <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
       </div>
@@ -726,11 +726,11 @@ body {
   </section>
 
   <!-- SNE Toolkit Section -->
-  <section class="section" style="background: var(--gray-100);">
-    <div class="container">
+  <section class="section" style="background: var(--gray-100);" >
+    <div class="container" id="SNE">
       <div class="section-header">
-        <div class="badge">Developer Tools</div>
-        <h2>Salaxios Narrative Engine<br><span class="text-accent">Toolkit</span></h2>
+        <div class="badge" >Developer Tools</div>
+        <h2 >Salaxios Narrative Engine<br><span class="text-accent">Toolkit</span></h2>
         <p>Professional development tools for RPG Maker MZ</p>
       </div>
       <div class="tools-grid">
@@ -756,7 +756,7 @@ body {
         </div>
       </div>
 
-      <div class="status-bar">
+      <div class="status-bar" id="status">
         <div class="status-item">
           <div class="status-label">Project Status</div>
           <div class="status-value green">In Development</div>
@@ -781,13 +781,13 @@ body {
   <section class="section">
     <div class="container" style="text-align: center;">
       <div class="section-header">
-        <div class="badge">Get In Touch</div>
+        <div class="badge" id="contact">Get In Touch</div>
         <h2>Questions? <span class="text-accent">We're Here</span> to Help</h2>
         <p>Have questions about our projects, tools, or development process? Reach out to the dev team directly.</p>
       </div>
       <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
         <a href="mailto:salaxios@proton.me" class="btn btn-primary"><i class="fas fa-envelope"></i> salaxios@proton.me</a>
-        <a href="#" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://github.com/salaxios/salaxios.github.io" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);"><i class="fab fa-github"></i> GitHub</a>
       </div>
     </div>
   </section>
